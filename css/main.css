@@ -101,6 +101,8 @@ legend {
 
 body {
   font-family: "Montserrat";
+  background-color: #000;
+  color: #fff;
 }
 
 .container {
@@ -135,6 +137,10 @@ body {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding-block: 24px;
 }
 .header .header-wrapper {
@@ -152,7 +158,137 @@ body {
   column-gap: 80px;
 }
 .header .header-wrapper .menu .menu-link {
+  position: relative;
   color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+.header .header-wrapper .menu .menu-link:after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  opacity: 0;
+  transition: 0.3s;
+}
+.header .header-wrapper .menu .menu-link:hover::after {
+  width: 50%;
+  opacity: 1;
+}
+
+.home {
+  min-height: 500px;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), url("../../assets/image/bg_home.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.home .icon-play {
+  width: 150px;
+  height: 150px;
+  scale: 1;
+  transition: 0.3s;
+}
+.home .icon-play:hover {
+  scale: 1.1;
+}
+.home .home-wrapper {
+  display: flex;
+  padding-top: 200px;
+}
+.home .home-wrapper .home-content {
+  max-width: 600px;
+}
+.home .home-wrapper .home-title {
+  font-size: 50px;
+  font-weight: 600;
+}
+.home .home-wrapper .home-desc {
+  font-size: 18px;
+  font-weight: 400;
+  padding-block: 20px;
+}
+.home .home-wrapper .btn {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 20px;
+  background-color: #242422;
+  color: #fff;
+  padding: 15px 20px;
+  transition: 0.3s;
+}
+.home .home-wrapper .btn:hover {
+  background-color: #2c2c29;
+}
+.home .home-wrapper .btn-play {
+  font-size: 150px;
+  color: #fff;
+  margin-left: 200px;
+  font-weight: 100;
+}
+
+.popup-video {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.popup-video.open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-video .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.popular {
+  margin-top: 200px;
+}
+.popular .popular-card {
+  cursor: pointer;
+}
+.popular .popular-img {
+  position: relative;
+  overflow: hidden;
+}
+.popular .popular-img img {
+  scale: 1;
+  transition: 0.3s;
+}
+.popular .popular-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.popular .popular-img:hover img {
+  scale: 1.1;
+}
+.popular .popular-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+}
+.popular .popular-loc {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  column-gap: 15px;
+  margin-block: 30px 20px;
+}
+.popular .popular-text {
+  font-size: 14px;
 }
 
 /*# sourceMappingURL=main.css.map */

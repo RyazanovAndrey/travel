@@ -1,10 +1,16 @@
-@mixin font($fz, $fw) {
+@mixin font($fz, $fw: 600) {
     font-size: $fz;
     font-weight: $fw;
 }
 
-@mixin flex($flex: flex, $jc: start, $ai: start) {
+@mixin flex($flex, $jc, $ai) {
     display: $flex;
     justify-content: $jc;
     align-items: $ai;
+}
+
+@mixin position($pos, $top-or-bottom, $num1, $left-or-right, $num2) {
+    position: $pos;
+    #{$top-or-bottom} : $num1;
+    #{$left-or-right} : $num2;
 }

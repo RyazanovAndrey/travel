@@ -1,0 +1,49 @@
+@use '../mixins' as m;
+
+.popular {
+
+    margin-top: 200px;
+
+    .popular-card {
+        cursor: pointer;
+    }
+
+    .popular-img {
+        
+        position: relative;
+        overflow: hidden;
+
+        img {
+            scale: 1;
+            transition: .3s;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+        }
+
+        &:hover img {
+            scale: 1.1;
+        }
+    }
+
+    .popular-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+
+    }
+
+    .popular-loc {
+        @include m.flex(flex, start, center);
+        column-gap: 15px;
+        margin-block: 30px 20px;
+    }
+
+    .popular-text {
+        font-size: 14px;
+    }
+}
