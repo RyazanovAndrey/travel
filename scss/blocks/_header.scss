@@ -1,0 +1,24 @@
+@use '../mixins' as m;
+@use '../vars' as v;
+
+.header {
+    padding-block: 24px;
+
+    .header-wrapper {
+        @include m.flex(flex, space-between, center);
+
+        .logo {
+            @include m.font(30px, 600);
+            color: v.$color-white;
+        }
+
+        .menu {
+            display: flex;
+            column-gap: 80px;
+
+            .menu-link {
+                color: v.$color-white;
+            }
+        }
+    }
+}
