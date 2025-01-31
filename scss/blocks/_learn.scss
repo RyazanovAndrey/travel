@@ -1,0 +1,44 @@
+@use '../mixins' as m;
+
+.learn {
+    margin-top: 200px;
+
+    .learn-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 100px;
+    }
+
+    .learn-title {
+        @include m.font(35px, 600);
+    }
+
+    .learn-text {
+        @include m.font(18px, 400);
+        margin-block: 45px;
+    }
+
+    .learn-img {
+        position: relative;
+        overflow: hidden;
+        
+
+        img {
+            width: 100%;
+            transition: .3s;
+        }
+
+        &:hover img {
+            scale: 1.1;
+        }
+
+    }
+
+    .learn-img::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    }
+}
