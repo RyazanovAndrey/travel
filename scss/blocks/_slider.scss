@@ -1,8 +1,52 @@
-.slider-promo {
-    margin-block: 200px;
+@use '../mixins' as m;
+@use '../vars' as v;
 
-    .slide {
-        
+.slider-box {
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        inset: 0;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.30) 50%, rgba(0,0,0,1) 100%);
+        pointer-events: none;
+    }
+}
+
+.slider-promo {
+    background: url('../../assets/image/slider-img-1.jpg');
+    min-height: 479px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+
+    .slider-promo-content {
+        max-width: 540px;
+        z-index: 99;
     }
 
+    .slider-promo-wrapper {
+        width: 1200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 15px;
+    }
+
+    .slider-promo-title {
+        @include m.font(35px, 600);
+    }
+
+    .slider-promo-text {
+        @include m.font(18px, 400);
+        margin-top: 50px;
+    }
+
+    .next-btn {
+        width: 115px;
+        height: 115px;
+        cursor: pointer;
+        z-index: 99;
+    }
 }
