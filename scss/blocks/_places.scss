@@ -1,0 +1,53 @@
+@use '../mixins' as m;
+@use '../vars' as v;
+
+.places {
+    margin-top: 220px;
+
+    .places-wrapper {
+        display: flex;
+        column-gap: 30px;
+        margin-top: 80px;
+    }
+
+    .places-card {
+        flex: 1;
+    }
+
+    .places-card-img {
+       
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        scale: 1;
+
+        img {
+            transition: .3s;
+        }
+
+        &:hover img {
+            scale: 1.1;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            inset: 0;
+            background: v.$color-card-gradient;
+        }
+    }
+
+    .places-card-title {
+        @include m.font(20px, 600)
+    }
+
+    .places-card-wrapper {
+        display: flex;
+        column-gap: 30px;
+        margin-block: 40px 20px;
+    }
+
+    .places-card-text {
+        @include m.font(16px, 200)
+    }
+}
