@@ -2,6 +2,10 @@
 @use './mixins' as m;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat';
     background-color: v.$color-black;
@@ -50,7 +54,6 @@ body {
 
 .title {
     @include m.font(35px, 600);
-    text-align: center;
 }
 
 .hidden {

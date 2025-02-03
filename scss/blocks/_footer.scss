@@ -1,0 +1,26 @@
+.footer {
+    margin-top: 200px;
+    border-top: 1px solid grey;
+    padding-block: 50px;
+
+    .footer-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-logo {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .footer-text {
+        max-width: 430px;
+    }
+
+    .footer-social {
+        display: flex;
+        column-gap: 20px;
+        align-items: center;
+    }
+}

@@ -1,0 +1,56 @@
+@use '../mixins' as m;
+@use '../vars' as v;
+
+.order {
+    margin-block: 200px;
+
+    .order-img {
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        &:hover img {
+            scale: 1.1;
+        }
+
+        img {
+            scale: 1;
+            transition: .3s;
+        }
+    }
+
+    .order-wrapper {
+        display: flex;
+        column-gap: 100px;
+        @include m.font(20, 400);
+    }
+
+    .order-text {
+        margin-block: 50px;
+    }
+
+    .order-field {
+        width: 100%;
+        border: 1px solid v.$color-white;
+        height: 60px;
+        padding-left: 20px;
+
+        &:nth-child(2) {
+            margin-top: 20px;
+        }
+    }
+
+    .order-btn {
+        background-color: v.$color-btn;
+        margin-top: 20px;
+        display: flex;
+        column-gap: 20px;
+        padding: 20px 40px;
+    }
+}

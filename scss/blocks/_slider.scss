@@ -3,6 +3,7 @@
 
 .slider-box {
     position: relative;
+    margin-top: 200px;
 
     &::before {
         position: absolute;
@@ -48,5 +49,10 @@
         height: 115px;
         cursor: pointer;
         z-index: 99;
+        transition: .3s;
+
+        &:hover {
+            scale: 1.1;
+        }
     }
 }

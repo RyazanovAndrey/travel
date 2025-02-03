@@ -1,3 +1,5 @@
+AOS.init();
+
 const iconPlay = document.querySelector('.icon-play')
 const popupVideo = document.querySelector('.popup-video')
 const closeBtn = document.querySelectorAll('.close-btn')

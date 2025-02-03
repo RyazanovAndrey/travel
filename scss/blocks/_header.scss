@@ -7,8 +7,7 @@
     left: 0;
     width: 100%;
     padding-block: 24px;
-    // border-bottom: 1px solid #B0B0B0;
-    z-index: 88;
+    z-index: 1000;
 
     &.line-blur {
         backdrop-filter: blur(10px)
@@ -24,12 +23,12 @@
 
         .menu {
             display: flex;
-            column-gap: 80px;
+            column-gap: 60px;
 
             .menu-link {
                 position: relative;
                 color: v.$color-white;
-                @include m.font(18px, 400);
+                @include m.font(16px, 400);
 
                 &:after {
                     @include m.position(absolute, bottom, -10px, left, 0);

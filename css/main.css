@@ -99,6 +99,10 @@ legend {
   display: block;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat";
   background-color: #000;
@@ -152,7 +156,6 @@ body {
 .title {
   font-size: 35px;
   font-weight: 600;
-  text-align: center;
 }
 
 .hidden {
@@ -165,7 +168,7 @@ body {
   left: 0;
   width: 100%;
   padding-block: 24px;
-  z-index: 88;
+  z-index: 1000;
 }
 .header.line-blur {
   backdrop-filter: blur(10px);
@@ -182,12 +185,12 @@ body {
 }
 .header .header-wrapper .menu {
   display: flex;
-  column-gap: 80px;
+  column-gap: 60px;
 }
 .header .header-wrapper .menu .menu-link {
   position: relative;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 }
 .header .header-wrapper .menu .menu-link:after {
@@ -400,6 +403,7 @@ body {
 
 .slider-box {
   position: relative;
+  margin-top: 200px;
 }
 .slider-box::before {
   position: absolute;
@@ -442,6 +446,79 @@ body {
   height: 115px;
   cursor: pointer;
   z-index: 99;
+  transition: 0.3s;
+}
+.slider-promo .next-btn:hover {
+  scale: 1.1;
+}
+
+.order {
+  margin-block: 200px;
+}
+.order .order-img {
+  position: relative;
+  overflow: hidden;
+}
+.order .order-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+.order .order-img:hover img {
+  scale: 1.1;
+}
+.order .order-img img {
+  scale: 1;
+  transition: 0.3s;
+}
+.order .order-wrapper {
+  display: flex;
+  column-gap: 100px;
+  font-size: 20;
+  font-weight: 400;
+}
+.order .order-text {
+  margin-block: 50px;
+}
+.order .order-field {
+  width: 100%;
+  border: 1px solid #fff;
+  height: 60px;
+  padding-left: 20px;
+}
+.order .order-field:nth-child(2) {
+  margin-top: 20px;
+}
+.order .order-btn {
+  background-color: #242422;
+  margin-top: 20px;
+  display: flex;
+  column-gap: 20px;
+  padding: 20px 40px;
+}
+
+.footer {
+  margin-top: 200px;
+  border-top: 1px solid grey;
+  padding-block: 50px;
+}
+.footer .footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footer-logo {
+  font-size: 30px;
+  font-weight: 600;
+}
+.footer .footer-text {
+  max-width: 430px;
+}
+.footer .footer-social {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */
