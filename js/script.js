@@ -71,5 +71,5 @@ nextBtn.addEventListener('click', () => {
     sliderPromoText.textContent = sliderInfo[countSlider].sub
 
 
-    sliderPromo.style.background = `url('../../assets/image/slider-img-${countSlider}.jpg')`
+    sliderPromo.style.background = `url('../assets/image/slider-img-${countSlider}.jpg')`
 })

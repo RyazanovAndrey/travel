@@ -4,11 +4,9 @@
 .home {
 
     min-height: 500px;
-    background: 
-    linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%),
-    url('../assets/image/bg_home.jpg');
-    background-size: cover;
-    background-position: center;
+    background:
+        linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%),
+        url('../assets/image/bg_home.jpg') center/cover no-repeat;
 
     .icon-play {
         width: 150px;
@@ -20,11 +18,17 @@
             scale: 1.1;
         }
     }
-    
+
 
     .home-wrapper {
         display: flex;
+        align-items: center;
         padding-top: 300px;
+
+        @include m.adaptive(576px) {
+            flex-direction: column;
+            align-items: start;
+        }
 
         .home-content {
             max-width: 600px
@@ -40,6 +44,12 @@
         }
 
         .btn-play {
+
+            @include m.adaptive(576px) {
+                margin-left: 0;
+                margin-top: 50px;
+            }
+
             font-size: 150px;
             color: v.$color-white;
             margin-left: 200px;
@@ -66,26 +76,43 @@
     }
 
     .popup-video-content {
+
         position: relative;
+        max-width: 70%;
+
+        @include m.adaptive(992px) {
+            max-width: 80%;
+        }
+
+        video {
+
+            width: 100%;
+    
+        }
 
         .close-btn-box {
-        position: absolute;
-        top: -30px;
-        right: -30px;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50px;
-        background-color: #181818;
-        cursor: pointer;
-    }
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            background-color: #181818;
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+                rotate: 90deg;
+            }
+        }
     }
 
-    
+
 
     .close-btn {
-       font-size: 50px;
+        font-size: 50px;
     }
 }

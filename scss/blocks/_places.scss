@@ -8,6 +8,11 @@
         display: flex;
         column-gap: 30px;
         margin-top: 80px;
+
+        @include m.adaptive(768px) {
+            flex-direction: column;
+            row-gap: 40px;
+        }
     }
 
     .places-card {
@@ -23,6 +28,10 @@
 
         img {
             transition: .3s;
+
+            @include m.adaptive(576px) {
+                width: 100%;
+            }
         }
 
         &:hover img {

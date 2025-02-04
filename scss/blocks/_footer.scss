@@ -1,3 +1,5 @@
+@use '../mixins' as m;
+
 .footer {
     margin-top: 200px;
     border-top: 1px solid grey;
@@ -7,6 +9,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include m.adaptive(768px) {
+            flex-direction: column;
+            row-gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     .footer-logo {

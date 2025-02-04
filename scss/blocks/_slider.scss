@@ -32,7 +32,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-inline: 15px;
+        padding-inline: 20px;
+
+        @include m.adaptive(764px) {
+            flex-direction: column;
+            row-gap: 40px;
+        }
     }
 
     .slider-promo-title {
@@ -50,6 +55,7 @@
         cursor: pointer;
         z-index: 99;
         transition: .3s;
+        scale: 1;
 
         &:hover {
             scale: 1.1;

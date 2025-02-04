@@ -29,6 +29,11 @@
         display: flex;
         column-gap: 100px;
         @include m.font(20, 400);
+
+        @include m.adaptive(764px) {
+            flex-direction: column;
+            row-gap: 40px;
+        }
     }
 
     .order-text {

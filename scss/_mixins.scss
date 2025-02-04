@@ -14,3 +14,9 @@
     #{$top-or-bottom} : $num1;
     #{$left-or-right} : $num2;
 }
+
+@mixin adaptive($width) {
+    @media(max-width: $width) {
+        @content
+    }
+}

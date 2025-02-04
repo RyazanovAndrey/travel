@@ -9,6 +9,31 @@
     padding-block: 24px;
     z-index: 1000;
 
+    .burger {
+        cursor: pointer;
+        display: none;
+
+        @include m.adaptive(992px) {
+            display: block;
+        }
+
+        .burger-check {
+            display: none;
+        }
+
+        .btn-close-close {
+            display: none;
+        }
+
+        .burger-check:checked ~ .btn-close-close {
+            display: block;
+        }
+
+        .burger-check:checked ~ .btn-open-menu {
+            display: none;
+        }
+    }
+
     &.line-blur {
         backdrop-filter: blur(10px)
     }
@@ -24,6 +49,10 @@
         .menu {
             display: flex;
             column-gap: 60px;
+
+            @include m.adaptive(992px) {
+                display: none;
+            }
 
             .menu-link {
                 position: relative;
