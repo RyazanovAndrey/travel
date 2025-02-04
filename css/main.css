@@ -211,7 +211,7 @@ body {
 
 .home {
   min-height: 500px;
-  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), url("/../assets/image/bg_home.jpg");
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), url("../assets/image/bg_home.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -414,7 +414,7 @@ body {
 }
 
 .slider-promo {
-  background: url("../../assets/image/slider-img-1.jpg");
+  background: url("../assets/image/slider-img-1.jpg");
   min-height: 479px;
   display: flex;
   align-items: center;
